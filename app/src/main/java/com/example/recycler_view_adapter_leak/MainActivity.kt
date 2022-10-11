@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fragmentContainerView, SubFragment.newInstance())
-            .commit()
+        binding.button.setOnClickListener {
+            val intent = SubActivity.createIntent(this)
+            startActivity(intent)
+        }
     }
 }
