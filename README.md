@@ -1,0 +1,1 @@
+# recycler_view_adapter_leak
